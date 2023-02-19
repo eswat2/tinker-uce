@@ -1,0 +1,47 @@
+import { define } from "uce"
+import { state } from "../utils"
+import { TW_LABEL } from "./TwLabel"
+
+const VALUES = "proto-uce-values"
+
+define(VALUES, {
+  init() {
+    this.tags = [TW_LABEL]
+    const { pick, sample, clicks } = state.get()
+    this.pick = pick
+    this.sample = sample
+    this.clicks = clicks
+
+    state.listen((value, key) => {
+      this[key] = value[key]
+
+      console.log("-- listen:", key, value[key])
+
+      this.render()
+    })
+
+    this.render()
+  },
+  render() {
+    this.html`
+      <div class="flex">
+        <div class="flex flex-col">
+          <div class="flex">
+            <span class="mr-10px font-bold">color:</span>
+            <span class="text-clrs-slate4 italic">${this.pick}</span>
+          </div>
+          <div class="mt-5px flex">
+            <span class="mr-10px font-bold">sample:</span>
+            <span class="text-clrs-slate4 italic">${
+              this.clicks > 0 ? this.sample : "..."
+            }</span>
+          </div>
+        </div>
+        <proto-uce-tw-label class="ml-auto" />
+      </div>
+    `
+  },
+})
+
+export { VALUES }
+export default VALUES
