@@ -13,11 +13,11 @@ define(VALUES, {
     this.clicks = clicks
 
     state.listen((value, key) => {
-      this[key] = value[key]
+      if (this[key] !== value[key]) {
+        this[key] = value[key]
 
-      console.log("-- listen:", key, value[key])
-
-      this.render()
+        this.render()
+      }
     })
 
     this.render()
