@@ -17,6 +17,7 @@ define(ESWAT2, {
         class="text-clrs-gray hover:text-clrs-navy"
         href=${url}
         aria-label=${who}
+        target="blank"
         title=${who}
       >
         <proto-uce-icon-fingerprint />
