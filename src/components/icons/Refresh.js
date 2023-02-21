@@ -8,7 +8,7 @@ define(REFRESH, {
     size: 24,
   },
   render() {
-    const { hex, size } = this.props
+    const { hex, size } = this
 
     this.html`
       <svg
