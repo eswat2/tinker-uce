@@ -10,7 +10,7 @@
     "start": "vite",
     "cc": "prettier --check './src/**/*.{css,pcss,js}'",
     "format": "prettier --write './src/**/*.{css,pcss,js}'",
-    "spell": "cspell './**/*.{js}'",
+    "spell": "cspell './src/**/*.{html,js}'",
     "build": "yarn twx; yarn format; tsc && vite build",
     "preview": "vite preview",
     "predeploy": "yarn version --patch; yarn build",
