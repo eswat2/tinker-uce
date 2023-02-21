@@ -14,7 +14,7 @@ define(COLORS, {
     this.html`
       <div class="flex flex-wrap" role="radiogroup">
         ${colorNames.map(
-          (key) => html` <proto-uce-color-pick value=${key} /> `
+          (key) => html` <proto-uce-color-pick .value=${key} /> `
         )}
       </div>
     `

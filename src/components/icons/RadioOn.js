@@ -3,8 +3,12 @@ import { define, html } from "uce"
 const RADIO_ON = "proto-uce-icon-radio-on"
 
 define(RADIO_ON, {
+  props: {
+    hex: "currentColor",
+    size: 24,
+  },
   render() {
-    const { hex = "currentColor", size = 24 } = this.props
+    const { hex, size } = this.props
 
     this.html`
       <svg

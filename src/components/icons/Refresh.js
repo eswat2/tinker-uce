@@ -3,8 +3,12 @@ import { define } from "uce"
 const REFRESH = "proto-uce-icon-refresh"
 
 define(REFRESH, {
+  props: {
+    hex: "currentColor",
+    size: 24,
+  },
   render() {
-    const { hex = "currentColor", size = 24 } = this.props
+    const { hex, size } = this.props
 
     this.html`
       <svg

@@ -8,18 +8,10 @@ define(COLOR_PICK, {
   init() {
     this.tags = [RADIO_OFF, RADIO_ON]
     this.pick = state.get().pick
-    this.selected = this.props.value === this.pick
-
-    this.select = (value) => {
-      return () => {
-        actions.setPick(value)
-      }
-    }
 
     state.listen((value, key) => {
       if (key === "pick") {
         this.pick = value.pick
-        this.selected = this.props.value === this.pick
 
         this.render()
       }
@@ -27,21 +19,29 @@ define(COLOR_PICK, {
 
     this.render()
   },
+  onClick() {
+    const { value } = this
+
+    actions.setPick(value)
+  },
+  props: {
+    value: undefined,
+  },
   render() {
-    const { value } = this.props
+    const { value, pick } = this
     const hex = namedColors[value]
+    const selected = value === pick
 
     this.html`
       <div 
         aria-label=${value} 
         title=${value} 
         role="radio" 
-        onClick=${this.select(value)}
       >
         ${
-          this.selected
-            ? html`<proto-uce-icon-radio-on hex=${hex} />`
-            : html`<proto-uce-icon-radio-off hex=${hex} />`
+          selected
+            ? html`<proto-uce-icon-radio-on .hex=${hex} />`
+            : html`<proto-uce-icon-radio-off .hex=${hex} />`
         }
       </div>
     `

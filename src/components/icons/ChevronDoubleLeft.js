@@ -3,8 +3,12 @@ import { define } from "uce"
 const CHEVRON_DOUBLE_LEFT = "proto-uce-icon-chevron-double-left"
 
 define(CHEVRON_DOUBLE_LEFT, {
+  props: {
+    hex: "currentColor",
+    size: 24,
+  },
   render() {
-    const { hex = "currentColor", size = 24 } = this.props
+    const { hex, size } = this
 
     this.html`
       <svg

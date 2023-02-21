@@ -3,8 +3,12 @@ import { define } from "uce"
 const FINGERPRINT = "proto-uce-icon-fingerprint"
 
 define(FINGERPRINT, {
+  props: {
+    hex: "currentColor",
+    size: 24,
+  },
   render() {
-    const { hex = "currentColor", size = 24 } = this.props
+    const { hex, size } = this
 
     this.html`
       <svg

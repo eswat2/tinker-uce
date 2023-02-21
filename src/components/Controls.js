@@ -31,7 +31,7 @@ define(CONTROLS, {
             actions.refresh()
           }}
         >
-          <proto-uce-icon-refresh size="24" class="mb-[-3.5px]" />
+          <proto-uce-icon-refresh class="mb-[-3.5px]" />
         </button>
         <button
           aria-label="Reset"
@@ -41,10 +41,10 @@ define(CONTROLS, {
             actions.reset()
           }}
         >
-          <proto-uce-icon-close size="24" class="mb-[-3.5px]" />
+          <proto-uce-icon-close class="mb-[-3.5px]" />
         </button>
         <span class="flex items-center">
-          <proto-uce-icon-chevron-double-left size="28" class="mb-[-3.5px]" />
+          <proto-uce-icon-chevron-double-left .size="28" class="mb-[-3.5px]" />
           <span class="italic">
             ${HELP}
             <sup>${this.clicks}</sup>
