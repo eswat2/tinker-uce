@@ -1,21 +1,12 @@
 import { define, html } from "uce"
 import { RADIO_OFF, RADIO_ON } from "./icons"
-import { namedColors, actions, state } from "../utils"
+import { namedColors, actions } from "../utils"
 
 const COLOR_PICK = "proto-uce-color-pick"
 
 define(COLOR_PICK, {
   init() {
     this.tags = [RADIO_OFF, RADIO_ON]
-    this.pick = state.get().pick
-
-    state.listen((value, key) => {
-      if (key === "pick") {
-        this.pick = value.pick
-
-        this.render()
-      }
-    })
 
     this.render()
   },
@@ -25,17 +16,17 @@ define(COLOR_PICK, {
     actions.setPick(value)
   },
   props: {
+    pick: undefined,
     value: undefined,
   },
   render() {
-    const { value, pick } = this
-    const hex = namedColors[value]
-    const selected = value === pick
+    const hex = namedColors[this.value]
+    const selected = this.value === this.pick
 
     this.html`
       <div 
-        aria-label=${value} 
-        title=${value} 
+        aria-label=${this.value} 
+        title=${this.value} 
         role="radio" 
       >
         ${

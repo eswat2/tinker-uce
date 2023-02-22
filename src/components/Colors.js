@@ -10,11 +10,15 @@ define(COLORS, {
 
     this.render()
   },
+  props: {
+    pick: undefined,
+  },
   render() {
     this.html`
       <div class="flex flex-wrap" role="radiogroup">
         ${colorNames.map(
-          (key) => html` <proto-uce-color-pick .value=${key} /> `
+          (key) =>
+            html` <proto-uce-color-pick .value=${key} .pick=${this.pick} /> `
         )}
       </div>
     `

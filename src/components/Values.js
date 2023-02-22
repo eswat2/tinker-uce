@@ -1,5 +1,4 @@
 import { define } from "uce"
-import { state } from "../utils"
 import { TW_LABEL } from "./TwLabel"
 
 const VALUES = "proto-uce-values"
@@ -7,20 +6,13 @@ const VALUES = "proto-uce-values"
 define(VALUES, {
   init() {
     this.tags = [TW_LABEL]
-    const { pick, sample, clicks } = state.get()
-    this.pick = pick
-    this.sample = sample
-    this.clicks = clicks
-
-    state.listen((value, key) => {
-      if (this[key] !== value[key]) {
-        this[key] = value[key]
-
-        this.render()
-      }
-    })
 
     this.render()
+  },
+  props: {
+    clicks: 0,
+    pick: undefined,
+    sample: [],
   },
   render() {
     this.html`

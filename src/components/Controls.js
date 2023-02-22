@@ -1,6 +1,6 @@
 import { define } from "uce"
 import { CHEVRON_DOUBLE_LEFT, CLOSE, REFRESH } from "./icons"
-import { actions, state } from "../utils"
+import { actions } from "../utils"
 
 const CONTROLS = "proto-uce-controls"
 const HELP = "click a button..."
@@ -8,17 +8,11 @@ const HELP = "click a button..."
 define(CONTROLS, {
   init() {
     this.tags = [CHEVRON_DOUBLE_LEFT, CLOSE, REFRESH]
-    this.clicks = state.get().clicks
-
-    state.listen((value, key) => {
-      if (key === "clicks") {
-        this.clicks = value.clicks
-
-        this.render()
-      }
-    })
 
     this.render()
+  },
+  props: {
+    clicks: 0,
   },
   render() {
     this.html`
