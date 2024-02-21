@@ -12,7 +12,7 @@ define(APP, {
     this.pick = undefined
     this.sample = []
 
-    state.listen((value, key) => {
+    state.listen((value, _old, key) => {
       if (this[key] !== value[key]) {
         this[key] = value[key]
 
