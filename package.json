@@ -20,7 +20,7 @@
   "dependencies": {
     "between.js": "0.1.2-fix.2",
     "easing-functions": "1.0.1",
-    "nanostores": "0.10.2",
+    "nanostores": "0.10.3",
     "uce": "1.18.0"
   },
   "devDependencies": {
@@ -33,7 +33,7 @@
     "prettier-plugin-tailwindcss": "0.5.13",
     "proto-tailwindcss-clrs": "0.0.321",
     "tailwindcss": "3.4.3",
-    "typescript": "5.4.3",
+    "typescript": "5.4.4",
     "vite": "5.2.8"
   }
 }
