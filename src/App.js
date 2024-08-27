@@ -8,9 +8,9 @@ define(APP, {
   init() {
     this.tags = [COLORS, CONTROLS, ESWAT2, HEADER, VALUES]
 
-    this.clicks = 0
+    this.clicks = undefined
     this.pick = undefined
-    this.sample = []
+    this.sample = undefined
 
     state.listen((value, _old, key) => {
       if (this[key] !== value[key]) {
@@ -21,8 +21,6 @@ define(APP, {
     })
 
     actions.init()
-
-    this.render()
   },
   render() {
     this.html`

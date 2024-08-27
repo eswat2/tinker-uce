@@ -2,10 +2,11 @@ import { map } from "nanostores"
 import { bag } from "./bag"
 import { funnelDefs } from "./funnelDefs"
 
+// initialize everything in the store to undefined...
 const state = map({
-  clicks: 0,
-  pick: "bada55",
-  sample: [],
+  clicks: undefined,
+  pick: undefined,
+  sample: undefined,
 })
 
 const saveState = () => {
@@ -23,6 +24,11 @@ const init = () => {
     state.setKey("pick", pick)
     state.setKey("sample", sample)
     state.setKey("clicks", clicks)
+  } else {
+    // there is no saved data, so we must initialize the store...
+    state.setKey("pick", "bada55")
+    state.setKey("sample", [])
+    state.setKey("clicks", 0)
   }
 }
 
