@@ -20,7 +20,7 @@
   "dependencies": {
     "between.js": "0.1.2-fix.2",
     "easing-functions": "1.0.1",
-    "nanostores": "0.11.2",
+    "nanostores": "0.11.3",
     "uce": "1.18.0"
   },
   "devDependencies": {
