@@ -25,6 +25,7 @@ define(COLOR_PICK, {
 
     this.html`
       <div 
+        aria-checked=${selected}
         aria-label=${this.value} 
         title=${this.value} 
         role="radio" 
