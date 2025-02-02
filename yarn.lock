@@ -953,10 +953,10 @@ cspell@8.17.3:
     semver "^7.6.3"
     tinyglobby "^0.2.10"
 
-easing-functions@1.0.1, easing-functions@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/easing-functions/-/easing-functions-1.0.1.tgz#66eaadafb4593212b700e867553d876009848ef4"
-  integrity sha512-5eHZ+InobokmzyYTs3BtL+bNoKVQiDF1iQoh1FQ0pWNAhhgqA2/o9z4LX/G6fq0jWFu16LdAxidxQi/fnRqfdw==
+easing-functions@1.2.1, easing-functions@^1.0.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/easing-functions/-/easing-functions-1.2.1.tgz#db4521cab6bc23c621aac330c739ad8c6811b282"
+  integrity sha512-0hZ4W9sJZ3t1Qdor1D0g2FkUfkTj3K3WcudDsQoOnHadYTZg7Vlfm20a1Z23zxoILMif8hPe4gk1SACDQNeMDg==
 
 electron-to-chromium@^1.5.73:
   version "1.5.90"
@@ -1104,9 +1104,9 @@ has-own-prop@^2.0.0:
   integrity sha512-Pq0h+hvsVm6dDEa8x82GnLSYHOzNDt7f0ddFa3FqcQlgzEiptPqL+XrOJNavjOzSYiYWIrgeVYYgGlLmnxwilQ==
 
 import-fresh@^3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/import-fresh/-/import-fresh-3.3.0.tgz#37162c25fcb9ebaa2e6e53d5b4d88ce17d9e0c2b"
-  integrity sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/import-fresh/-/import-fresh-3.3.1.tgz#9cecb56503c0ada1f2741dbbd6546e4b13b57ccf"
+  integrity sha512-TR3KfrTZTYLPB6jUjfx6MF9WcWrHL9su5TObK4ZkYgBdWKPOFoSoQIdEuTuR82pmtxH2spWG9h6etwfr1pLBqQ==
   dependencies:
     parent-module "^1.0.0"
     resolve-from "^4.0.0"
